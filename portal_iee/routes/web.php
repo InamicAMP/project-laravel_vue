@@ -6,15 +6,16 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('Welcome', [ 
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
+        'timemachine' => now(),
     ]);
 });
 
-Route::get('/dashboard', function () {
+Route::get('/panel', function () { // Cambia el nombre de 'dashboard' a 'panel' en la ruta
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 

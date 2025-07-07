@@ -26,9 +26,9 @@ const verificationLinkSent = computed(
         <Head title="Email Verification" />
 
         <div class="mb-4 text-sm text-gray-600">
-            Thanks for signing up! Before getting started, could you verify your
-            email address by clicking on the link we just emailed to you? If you
-            didn't receive the email, we will gladly send you another.
+            
+            ¡Gracias por registrarte! Antes de empezar, ¿podrías verificar tu dirección de correo electrónico haciendo clic en el enlace que te acabamos de enviar? 
+            Si no recibiste el correo electrónico, con gusto te enviaremos otro.
         </div>
 
         <div
@@ -45,7 +45,8 @@ const verificationLinkSent = computed(
                     :class="{ 'opacity-25': form.processing }"
                     :disabled="form.processing"
                 >
-                    Resend Verification Email
+                    
+                    Reenviar correo electrónico de verificación
                 </PrimaryButton>
 
                 <Link
@@ -53,7 +54,7 @@ const verificationLinkSent = computed(
                     method="post"
                     as="button"
                     class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >Log Out</Link
+                    >Cerrar sesión</Link
                 >
             </div>
         </form>
